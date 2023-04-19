@@ -1,24 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Setup Guid:
 
-Things you may want to cover:
+* Install Ruby 3.0.2
 
-* Ruby version
+* Run `bundle install` for installing all gems
 
-* System dependencies
+* Change database credentials in `database.yml`
 
-* Configuration
+* Run `rails db:setup` for Database setup
 
-* Database creation
+* Run `rails s` for starting rails server
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
