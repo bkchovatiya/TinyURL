@@ -1,0 +1,41 @@
+<p style="color: green"><%= notice %></p>
+<div class="container">
+  <h2>Url Info</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Link</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td> <%= @link.url.original %> </td>
+        <td> 
+          <%= link_to "Show", @link.url %> |
+          <%= link_to "Visit Short Link", visit_shortened_url_path(@link.url.identifier) %> |
+          <%= link_to "Edit", edit_url_path(@link.url) %>
+        </td>
+      <tr>
+    </tbody>
+  </table>
+  <hr>
+  <h2>Visitors Info</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Ip</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @link.visits.each do |visit| %>
+        <tr>
+          <td> <%= visit.id %> </td>
+          <td> <%= visit.ip %> </td>
+        <tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= link_to "Back", root_path %>
+</div>

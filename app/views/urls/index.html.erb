@@ -1,0 +1,18 @@
+<p style="color: green"><%= notice %></p>
+<div class="container">
+  <h2>Urls</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Link</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @urls.each do |url| %>
+        <%= render url %>
+      <% end %>
+    </tbody>
+  </table>
+  <%= link_to "New url", new_url_path %>
+</div>

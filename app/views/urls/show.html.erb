@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+<div class="container">
+  <h2>Url</h2>
+  
+  <div>Link: <%= @url.original %></div>
+  <br>
+  <div><%= link_to "Visit Short Link", visit_shortened_url_path(@url.identifier) %></div>
+  <div><%= link_to "Edit this url", edit_url_path(@url) %>
+  </div>  
+  <div><%= link_to "Back to urls", urls_path %></div>
+  <br>
+  <%= button_to "Destroy this url", @url, method: :delete %>
+</div>

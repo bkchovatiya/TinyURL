@@ -1,0 +1,11 @@
+<div id="<%= dom_id url %>">
+  <tr>
+    <td> <%= url.original %> </td>
+    <td> 
+      <%= link_to "Show", url %> |
+      <%= link_to "Visit Short Link", visit_shortened_url_path(token: url.identifier) %> |
+      <%= link_to "Edit", edit_url_path(url) %> |
+      <%= link_to "Info", shortened_url_info_path(token: url.identifier) %>
+    </td>
+  <tr>
+</div>
